@@ -1,6 +1,23 @@
 #ifndef T1_TP1_DOMINIOS_H
 #define T1_TP1_DOMINIOS_H
 
-void hello();
+#include <stdexcept>
+
+using namespace std;
+
+
+class Cidade {
+private:
+    string valor;
+    void validar(string);
+public:
+    void setValor(string);
+    string getValor() const;
+};
+
+inline string Cidade::getValor() const{
+    return valor;
+}
+
 
 #endif //T1_TP1_DOMINIOS_H
