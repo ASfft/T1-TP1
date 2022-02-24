@@ -22,15 +22,15 @@ inline string Cidade::getValor() const{
 
 class Nota {
 private:
-    Int valor;
-    void validar(Int);
+    int valor;
+    void validar(int);
 public:
-    void setValor(Int);
-    Int getValor() const;
+    void setValor(int);
+    int getValor() const;
 };
 
 
-inline string Nota::getValor() const{
+inline int Nota::getValor() const{
     return valor;
 }
 
