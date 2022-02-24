@@ -38,3 +38,27 @@ void Cidade::setValor(string valor) {
     validar(valor);
     this->valor = valor;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+// Matricula: 190134330
+// Eduardo Augusto Volpi
+void Nota::validar(Int valor){
+    int i;
+    bool found = false;
+    if(valor>=0 && valor<=5){found = True};
+    if(!found) {throw invalid_argument("Argumento invalido.");}
+}
+
+void Nota::setValor(Int valor) {
+    validar(valor);
+    this->valor = valor;

@@ -20,4 +20,19 @@ inline string Cidade::getValor() const{
 }
 
 
+class Nota {
+private:
+    Int valor;
+    void validar(Int);
+public:
+    void setValor(Int);
+    Int getValor() const;
+};
+
+
+inline string Nota::getValor() const{
+    return valor;
+}
+
+
 #endif //T1_TP1_DOMINIOS_H
