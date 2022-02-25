@@ -52,5 +52,14 @@ int main() {
             break;
     }
 
+    TUEmail testeF;
+
+    switch(testeF.run()){
+        case TUDuracao::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+            break;
+        case TUDuracao::FALHA  : cout << "FALHA   - CODIGO" << endl;
+            break;
+    }
+
     return 0;
 }
