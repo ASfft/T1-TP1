@@ -41,5 +41,9 @@ public:
     string getValor() const;
 };
 
+inline string Endereco::getValor() const{
+    return valor;
+}
+
 
 #endif //T1_TP1_DOMINIOS_PEDRO_H
