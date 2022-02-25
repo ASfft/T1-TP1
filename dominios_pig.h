@@ -11,7 +11,7 @@ using namespace std;
 class Nota {
 private:
     int valor;
-    void validar(int);
+    static void validar(int);
 public:
     void setValor(int);
     int getValor() const;
