@@ -34,7 +34,8 @@ void Cidade::validar(string valor){
             found = true;
         }
     }
-    if(!found) throw invalid_argument("Argumento invalido.");
+    if(!found)
+        throw invalid_argument("Argumento invalido.");
 }
 
 void Cidade::setValor(string valor) {
@@ -48,15 +49,18 @@ void Cidade::setValor(string valor) {
 
 //Codigo:
 void Codigo::validar(string valor){
-    if (valor.length() != 7) throw invalid_argument("Argumento invalido.");
-    int i;
+    if (valor.length() != 7)
+        throw invalid_argument("Argumento invalido.");
+    int multiplicador = 7;
     int soma = 0;
-    for (i=5; i>=0; i--) {
+    for (int i = 0; i < 6; i++) {
         if(valor[i] >= '0' && valor[i] <= '9'){
-            soma += (valor[i] - '0')*(i+2)*10;
-        } else throw invalid_argument("Argumento invalido.");
+            soma += (valor[i] - '0')*multiplicador--;
+        } else
+            throw invalid_argument("Argumento invalido.");
     }
-    if (soma % 11 != (valor[valor.length() - 1] - '0') || soma == 0) throw invalid_argument("Argumento invalido.");
+    if ((soma*10) % 11 != (valor[valor.length() - 1] - '0') || soma == 0)
+        throw invalid_argument("Argumento invalido.");
 }
 
 void Codigo::setValor(string valor) {
@@ -80,27 +84,32 @@ void Data::validar(string valor){
     }
     data_dividida.push_back(valor.substr(last));
 
-    if (data_dividida.size() != 3) throw invalid_argument("Argumento invalido.");
+    if (data_dividida.size() != 3)
+        throw invalid_argument("Argumento invalido.");
 
-    if (data_dividida[0].length() != 2) throw invalid_argument("Argumento invalido.");
+    if (data_dividida[0].length() != 2)
+        throw invalid_argument("Argumento invalido.");
     int dia = stoi(data_dividida[0]);
     int ano = stoi(data_dividida[2]);
 
-    if (ano < 2000  || ano > 9999) throw invalid_argument("Argumento invalido.");
+    if (ano < 2000  || ano > 9999)
+        throw invalid_argument("Argumento invalido.");
 
     bool ano_bissexto = (ano % 4 == 0 && ano % 100 != 0);
     if (ano_bissexto) dias_meses[1] = 29;
 
     bool found = false;
     int limite_dia;
-    for(int i = 0; i < meses->length(); i++){
+    for(int i = 0; i < 12; i++){
         if(meses[i] == data_dividida[1]){
             found = true;
             limite_dia = dias_meses[i];
+            break;
         }
     }
     if(!found) throw invalid_argument("Argumento invalido.");
-    if (dia < 1 || dia > limite_dia) throw invalid_argument("Argumento invalido.");
+    if (dia < 1 || dia > limite_dia)
+        throw invalid_argument("Argumento invalido.");
 }
 
 void Data::setValor(string valor) {
@@ -114,13 +123,15 @@ void Data::setValor(string valor) {
 //Descricao:
 void Descricao::validar(string valor){
     size_t len = valor.length();
-    if (len < 0 || len > 30) throw invalid_argument("Argumento invalido.");
+    if (len < 0 || len > 30)
+        throw invalid_argument("Argumento invalido.");
 
     for (int initial = 0; initial < 2; initial++) {
         for (int i = initial; i < len - 1; i += 2) {
             char c = valor[i];
             char next_c = valor[i + 1];
-            if (c == next_c && (c == ' ' || c == '.')) throw invalid_argument("Argumento invalido.");
+            if (c == next_c && (c == ' ' || c == '.'))
+                throw invalid_argument("Argumento invalido.");
         }
     }
 }
@@ -142,7 +153,8 @@ void Duracao::validar(int valor){
             found = true;
         }
     }
-    if(!found) throw invalid_argument("Argumento invalido.");
+    if(!found)
+        throw invalid_argument("Argumento invalido.");
 }
 
 void Duracao::setValor(int valor) {
