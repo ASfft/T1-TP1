@@ -13,5 +13,9 @@
 using namespace std;
 
 int main(){
-    const string meses[12] = {"Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"};
+    string valor = "12:33";
+    size_t separador = valor.find(':');
+    int horas = stoi(valor.substr(0, separador));
+    int minutos = stoi(valor.substr(separador + 1, string::npos));
+    cout << horas << minutos;
 };
