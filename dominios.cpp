@@ -161,3 +161,44 @@ void Duracao::setValor(int valor) {
     validar(valor);
     this->valor = valor;
 }
+
+void Email::validar(string valor){
+    size_t separador = valor.find('@');
+    if (separador == -1)
+        throw invalid_argument("Argumento invalido.");
+
+    string parte_local = valor.substr(0, separador);
+    string dominio = valor.substr(separador+1, string::npos);
+
+    if (parte_local.length() > 64 || parte_local[0] == '.' || parte_local[valor.length() - 1] == '.' || dominio.length() > 253 || dominio[0] == '.')
+        throw invalid_argument("Argumento invalido.");
+
+    int invalid_chars[11] = {34, 40, 41, 58, 59, 60, 62, 64, 91, 92, 93};
+    for (int i = 0; i < parte_local.length(); i++) {
+        if (parte_local[i] == '.' && parte_local[i + 1] == '.')
+            throw invalid_argument("Argumento invalido.");
+        int char_ascii = (int)parte_local[i];
+        if (char_ascii < 32 || char_ascii > 126)
+            throw invalid_argument("Argumento invalido.");
+        for (int invalid_char : invalid_chars) {
+            if (char_ascii == invalid_char)
+                throw invalid_argument("Argumento invalido.");
+        }
+    };
+
+    for (int i = 0; i < dominio.length(); i++) {
+        if (dominio[i] == '.' && dominio[i + 1] == '.')
+            throw invalid_argument("Argumento invalido.");
+
+        int char_ascii = (int)dominio[i];
+        if (!((char_ascii >= 48 && char_ascii <= 57) || (char_ascii >= 65 && char_ascii <= 90) || (char_ascii >= 97 && char_ascii <= 122) || char_ascii == 45 || char_ascii == 46))
+            throw invalid_argument("Argumento invalido.");
+    }
+
+
+}
+
+void Email::setValor(string valor) {
+    validar(valor);
+    this->valor = valor;
+}

@@ -71,5 +71,18 @@ inline int Duracao::getValor() const{
     return valor;
 }
 
+class Email {
+private:
+    string valor;
+    static void validar(string);
+public:
+    void setValor(string);
+    string getValor() const;
+};
+
+inline string Email::getValor() const{
+    return valor;
+}
+
 
 #endif //T1_TP1_DOMINIOS_H

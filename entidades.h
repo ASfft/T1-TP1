@@ -4,30 +4,30 @@
 #include "dominios.h"
 
 class Excursao {
-private:
-    Codigo codigo;
-    Titulo titulo;
-    Nota nota;
-    Cidade cidade;
-    Duracao duracao;
-    Descricao descricao;
-    Endereco endereco;
+    private:
+        Codigo codigo;
+        Titulo titulo;
+        Nota nota;
+        Cidade cidade;
+        Duracao duracao;
+        Descricao descricao;
+        Endereco endereco;
 
-public:
-    void setCodigo(const Codigo&);
-    Codigo getCodigo() const;
-    void setTitulo(const Titulo&);
-    Titulo getTitulo() const;
-    void setNota(const Nota&);
-    Nota getNota() const;
-    void setCidade(const Cidade&);
-    Cidade getCidade() const;
-    void setDuracao(const Duracao&);
-    Duracao getDuracao() const;
-    void setDescricao(const Descricao&);
-    Descricao getDescricao() const;
-    void setEndereco(const Endereco&);
-    Endereco getEndereco() const;
+    public:
+        void setCodigo(const Codigo&);
+        Codigo getCodigo() const;
+        void setTitulo(const Titulo&);
+        Titulo getTitulo() const;
+        void setNota(const Nota&);
+        Nota getNota() const;
+        void setCidade(const Cidade&);
+        Cidade getCidade() const;
+        void setDuracao(const Duracao&);
+        Duracao getDuracao() const;
+        void setDescricao(const Descricao&);
+        Descricao getDescricao() const;
+        void setEndereco(const Endereco&);
+        Endereco getEndereco() const;
 };
 
 inline void Excursao::setCodigo(const Codigo& codigo){
