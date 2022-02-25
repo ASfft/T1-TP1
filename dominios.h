@@ -58,5 +58,18 @@ inline string Descricao::getValor() const{
     return valor;
 }
 
+class Duracao {
+private:
+    int valor;
+    static void validar(int);
+public:
+    void setValor(int);
+    int getValor() const;
+};
+
+inline int Duracao::getValor() const{
+    return valor;
+}
+
 
 #endif //T1_TP1_DOMINIOS_H

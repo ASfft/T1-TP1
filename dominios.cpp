@@ -29,8 +29,8 @@ void Cidade::validar(string valor){
             "Phuket",
     };
     bool found = false;
-    for(int i = 0; i < cidades_validas->length(); i++){
-        if(cidades_validas[i] == valor){
+    for(string cidade: cidades_validas){
+        if(cidade == valor){
             found = true;
         }
     }
@@ -126,6 +126,26 @@ void Descricao::validar(string valor){
 }
 
 void Descricao::setValor(string valor) {
+    validar(valor);
+    this->valor = valor;
+}
+
+// Matricula: 200015095
+// Augusto Suffert Monteiro
+
+//Duracao:
+void Duracao::validar(int valor){
+    int duracoes_validas[5] = {30,60,90,120,180};
+    bool found = false;
+    for(int duracao : duracoes_validas){
+        if(duracao == valor){
+            found = true;
+        }
+    }
+    if(!found) throw invalid_argument("Argumento invalido.");
+}
+
+void Duracao::setValor(int valor) {
     validar(valor);
     this->valor = valor;
 }
