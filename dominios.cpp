@@ -1,8 +1,11 @@
 #include "dominios.h"
 
 #include <iostream>
+#include <string>
 
-// Matricula: 20015095
+using namespace std;
+
+// Matricula: 200015095
 // Augusto Suffert Monteiro
 
 //Cidade:
@@ -31,7 +34,7 @@ void Cidade::validar(string valor){
             found = true;
         }
     }
-    if(!found) {throw invalid_argument("Argumento invalido.");}
+    if(!found) throw invalid_argument("Argumento invalido.");
 }
 
 void Cidade::setValor(string valor) {
@@ -40,4 +43,23 @@ void Cidade::setValor(string valor) {
 }
 
 
+// Matricula: 200015095
+// Augusto Suffert Monteiro
 
+//Codigo:
+void Codigo::validar(string valor){
+    if (valor.length() != 7) throw invalid_argument("Argumento invalido.");
+    int i;
+    int soma = 0;
+    for (i=5; i>=0; i--) {
+        if(valor[i] >= '0' && valor[i] <= '9'){
+            soma += (valor[i] - '0')*(i+2)*10;
+        } else throw invalid_argument("Argumento invalido.");
+    }
+    if (soma % 11 != (valor[valor.length() - 1] - '0') || soma == 0) throw invalid_argument("Argumento invalido.");
+}
+
+void Codigo::setValor(string valor) {
+    validar(valor);
+    this->valor = valor;
+}
