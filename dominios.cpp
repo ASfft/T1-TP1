@@ -107,3 +107,25 @@ void Data::setValor(string valor) {
     validar(valor);
     this->valor = valor;
 }
+
+// Matricula: 200015095
+// Augusto Suffert Monteiro
+
+//Descricao:
+void Descricao::validar(string valor){
+    size_t len = valor.length();
+    if (len < 0 || len > 30) throw invalid_argument("Argumento invalido.");
+
+    for (int initial = 0; initial < 2; initial++) {
+        for (int i = initial; i < len - 1; i += 2) {
+            char c = valor[i];
+            char next_c = valor[i + 1];
+            if (c == next_c && (c == ' ' || c == '.')) throw invalid_argument("Argumento invalido.");
+        }
+    }
+}
+
+void Descricao::setValor(string valor) {
+    validar(valor);
+    this->valor = valor;
+}
