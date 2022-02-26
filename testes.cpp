@@ -518,3 +518,205 @@ int TUNome::run(){
     tearDown();
     return estado;
 }
+
+//---------------------------------------------------------------------
+void TUExcursao::setUp(){
+    excursao = new Excursao();
+    estado = SUCESSO;
+}
+
+void TUExcursao::tearDown(){
+    delete excursao;
+}
+
+void TUExcursao::testarCenarioSucesso(){
+
+    try {
+        Codigo codigo;
+        codigo.setValor(CODIGO_VALIDO);
+        excursao->setCodigo(codigo);
+        if (excursao->getCodigo().getValor() != CODIGO_VALIDO)
+            estado = FALHA;
+
+        Titulo titulo;
+        titulo.setValor(TITULO_VALIDO);
+        excursao->setTitulo(titulo);
+        if (excursao->getTitulo().getValor() != TITULO_VALIDO)
+            estado = FALHA;
+
+        Nota nota;
+        nota.setValor(NOTA_VALIDA);
+        excursao->setNota(nota);
+        if (excursao->getNota().getValor() != NOTA_VALIDA)
+            estado = FALHA;
+
+        Cidade cidade;
+        cidade.setValor(CIDADE_VALIDA);
+        excursao->setCidade(cidade);
+        if (excursao->getCidade().getValor() != CIDADE_VALIDA)
+            estado = FALHA;
+
+        Duracao duracao;
+        duracao.setValor(DURACAO_VALIDA);
+        excursao->setDuracao(duracao);
+        if (excursao->getDuracao().getValor() != DURACAO_VALIDA)
+            estado = FALHA;
+
+        Descricao descricao;
+        descricao.setValor(DESCRICAO_VALIDA);
+        excursao->setDescricao(descricao);
+        if (excursao->getDescricao().getValor() != DESCRICAO_VALIDA)
+            estado = FALHA;
+
+        Endereco endereco;
+        endereco.setValor(ENDERECO_VALIDO);
+        excursao->setEndereco(endereco);
+        if (excursao->getEndereco().getValor() != ENDERECO_VALIDO)
+            estado = FALHA;
+    }
+    catch(invalid_argument &excecao){
+        estado = FALHA;
+    }
+}
+
+int TUExcursao::run(){
+    setUp();
+    testarCenarioSucesso();
+    tearDown();
+    return estado;
+}
+
+//---------------------------------------------------------------------
+void TUUsuario::setUp(){
+    usuario = new Usuario();
+    estado = SUCESSO;
+}
+
+void TUUsuario::tearDown(){
+    delete usuario;
+}
+
+void TUUsuario::testarCenarioSucesso(){
+
+    try {
+        Nome nome;
+        nome.setValor(NOME_VALIDO);
+        usuario->setNome(nome);
+        if (usuario->getNome().getValor() != NOME_VALIDO)
+            estado = FALHA;
+
+        Email email;
+        email.setValor(EMAIL_VALIDO);
+        usuario->setEmail(email);
+        if (usuario->getEmail().getValor() != EMAIL_VALIDO)
+            estado = FALHA;
+
+        Senha senha;
+        senha.setValor(SENHA_VALIDA);
+        usuario->setSenha(senha);
+        if (usuario->getSenha().getValor() != SENHA_VALIDA)
+            estado = FALHA;
+    }
+    catch(invalid_argument &excecao){
+        estado = FALHA;
+    }
+}
+
+int TUUsuario::run(){
+    setUp();
+    testarCenarioSucesso();
+    tearDown();
+    return estado;
+}
+
+//---------------------------------------------------------------------
+void TUSessao::setUp(){
+    sessao = new Sessao();
+    estado = SUCESSO;
+}
+
+void TUSessao::tearDown(){
+    delete sessao;
+}
+
+void TUSessao::testarCenarioSucesso(){
+
+    try {
+        Codigo codigo;
+        codigo.setValor(CODIGO_VALIDO);
+        sessao->setCodigo(codigo);
+        if (sessao->getCodigo().getValor() != CODIGO_VALIDO)
+            estado = FALHA;
+
+        Data data;
+        data.setValor(DATA_VALIDA);
+        sessao->setData(data);
+        if (sessao->getData().getValor() != DATA_VALIDA)
+            estado = FALHA;
+
+        Horario horario;
+        horario.setValor(HORARIO_VALIDO);
+        sessao->setHorario(horario);
+        if (sessao->getHorario().getValor() != HORARIO_VALIDO)
+            estado = FALHA;
+
+        Idioma idioma;
+        idioma.setValor(IDIOMA_VALIDO);
+        sessao->setIdioma(idioma);
+        if (sessao->getIdioma().getValor() != IDIOMA_VALIDO)
+            estado = FALHA;
+    }
+    catch(invalid_argument &excecao){
+        estado = FALHA;
+    }
+}
+
+int TUSessao::run(){
+    setUp();
+    testarCenarioSucesso();
+    tearDown();
+    return estado;
+}
+
+//---------------------------------------------------------------------
+void TUAvaliacao::setUp(){
+    avaliacao = new Avaliacao();
+    estado = SUCESSO;
+}
+
+void TUAvaliacao::tearDown(){
+    delete avaliacao;
+}
+
+void TUAvaliacao::testarCenarioSucesso(){
+
+    try {
+        Codigo codigo;
+        codigo.setValor(CODIGO_VALIDO);
+        avaliacao->setCodigo(codigo);
+        if (avaliacao->getCodigo().getValor() != CODIGO_VALIDO)
+            estado = FALHA;
+
+        Nota nota;
+        nota.setValor(NOTA_VALIDA);
+        avaliacao->setNota(nota);
+        if (avaliacao->getNota().getValor() != NOTA_VALIDA)
+            estado = FALHA;
+
+        Descricao descricao;
+        descricao.setValor(DESCRICAO_VALIDA);
+        avaliacao->setDescricao(descricao);
+        if (avaliacao->getDescricao().getValor() != DESCRICAO_VALIDA)
+            estado = FALHA;
+    }
+    catch(invalid_argument &excecao){
+        estado = FALHA;
+    }
+}
+
+int TUAvaliacao::run(){
+    setUp();
+    testarCenarioSucesso();
+    tearDown();
+    return estado;
+}

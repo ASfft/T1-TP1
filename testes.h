@@ -264,4 +264,85 @@ public:
     int run();
 };
 
+//---------------------------------------------------------------------
+// Matricula: 200015095
+// Augusto Suffert Monteiro
+class TUExcursao {
+private:
+    const string CODIGO_VALIDO   = "0001325";
+    const string TITULO_VALIDO   = "Melhor Excursao";
+    const static int NOTA_VALIDA   = 5;
+    const string CIDADE_VALIDA   = "Londres";
+    const static int DURACAO_VALIDA   = 60;
+    const string DESCRICAO_VALIDA   = "Melhor experiencia da vida.";
+    const string ENDERECO_VALIDO   = "Ao lado do Big Ben";
+    Excursao *excursao;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+public:
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
+};
+
+//---------------------------------------------------------------------
+// Matricula: 200015095
+// Augusto Suffert Monteiro
+class TUUsuario {
+private:
+    const string NOME_VALIDO   = "Joazinho135";
+    const string EMAIL_VALIDO = "joa.zinho-135@outlook.com.br";
+    const string SENHA_VALIDA = "Jao123";
+    Usuario *usuario;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+public:
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
+};
+
+//---------------------------------------------------------------------
+// Matricula: 200015095
+// Augusto Suffert Monteiro
+class TUSessao {
+private:
+    const string CODIGO_VALIDO   = "4310004";
+    const string DATA_VALIDA = "28-Jan-2023";
+    const string HORARIO_VALIDO = "15:35";
+    const string IDIOMA_VALIDO = "Indonesio";
+    Sessao *sessao;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+public:
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
+};
+
+//---------------------------------------------------------------------
+// Matricula: 200015095
+// Augusto Suffert Monteiro
+class TUAvaliacao {
+private:
+    const string CODIGO_VALIDO   = "6010318";
+    const static int NOTA_VALIDA   = 3;
+    const string DESCRICAO_VALIDA   = "Deu para o gasto.";
+    Avaliacao *avaliacao;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+public:
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
+};
+
 #endif //T1_TP1_TESTES_H
