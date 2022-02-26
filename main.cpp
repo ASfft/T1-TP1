@@ -1,6 +1,5 @@
 #include <iostream>
 
-#include "entidades.h"
 #include "testes.h"
 
 using namespace std;
@@ -9,6 +8,7 @@ int main() {
 
     TUCodigo testeA;
 
+    cout << "Teste Codigo:    ";
     switch(testeA.run()){
         case TUCodigo::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
             break;
@@ -18,6 +18,7 @@ int main() {
 
     TUCidade testeB;
 
+    cout << "Teste Cidade:    ";
     switch(testeB.run()){
         case TUCidade::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
             break;
@@ -27,6 +28,7 @@ int main() {
 
     TUData testeC;
 
+    cout << "Teste Data:      ";
     switch(testeC.run()){
         case TUData::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
             break;
@@ -36,6 +38,7 @@ int main() {
 
     TUDescricao testeD;
 
+    cout << "Teste Descricao: ";
     switch(testeD.run()){
         case TUDescricao::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
             break;
@@ -45,6 +48,7 @@ int main() {
 
     TUDuracao testeE;
 
+    cout << "Teste Duracao:   ";
     switch(testeE.run()){
         case TUDuracao::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
             break;
@@ -54,6 +58,7 @@ int main() {
 
     TUEmail testeF;
 
+    cout << "Teste Email:     ";
     switch(testeF.run()){
         case TUEmail::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
             break;
@@ -63,6 +68,7 @@ int main() {
 
     TUEndereco testeG;
 
+    cout << "Teste Endereco:  ";
     switch(testeG.run()){
         case TUEndereco::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
             break;
@@ -72,6 +78,7 @@ int main() {
 
     TUHorario testeH;
 
+    cout << "Teste Horario:   ";
     switch(testeH.run()){
         case TUHorario::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
             break;
@@ -81,6 +88,7 @@ int main() {
 
     TUIdioma testeI;
 
+    cout << "Teste Idioma:    ";
     switch(testeI.run()){
         case TUIdioma::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
             break;
@@ -90,6 +98,7 @@ int main() {
 
     TUTitulo testeJ;
 
+    cout << "Teste Titulo:    ";
     switch(testeJ.run()){
         case TUTitulo::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
             break;
@@ -99,6 +108,7 @@ int main() {
 
     TUSenha testeK;
 
+    cout << "Teste Senha:     ";
     switch(testeK.run()){
         case TUSenha::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
             break;
@@ -108,6 +118,7 @@ int main() {
 
     TUNota testeL;
 
+    cout << "Teste Nota:      ";
     switch(testeL.run()){
         case TUNota::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
             break;
@@ -117,6 +128,7 @@ int main() {
 
     TUNome testeM;
 
+    cout << "Teste Nome:      ";
     switch(testeM.run()){
         case TUNome::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
             break;

@@ -189,8 +189,8 @@ public:
 // Pedro Brazil Suffert
 class TUNome {
 private:
-    const string VALOR_VALIDO = "Ingles";
-    const string VALOR_INVALIDO = "Portunhol";
+    const string VALOR_VALIDO = "Filipe. ";
+    const string VALOR_INVALIDO = "Fili.pe";
     Nome *nome;
     int estado;
     void setUp();

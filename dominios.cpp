@@ -292,7 +292,7 @@ void Nome::validar(string valor) {
         char prev_c = valor[i - 1];
         if (c == '.' && !((prev_c >= 65 && prev_c <= 90) || (prev_c >= 97 && prev_c <= 122)))
             throw invalid_argument("Argumento invalido.");
-        if (c == '.' && (next_c != ' ' or i == len - 1))
+        if (c == '.' && (next_c != ' ' && i != len - 1))
             throw invalid_argument("Argumento invalido.");
         int valor_ascii = (int) c;
         if (!((valor_ascii >= 65 && valor_ascii <= 90) || (valor_ascii >= 97 && valor_ascii <= 122) ||
