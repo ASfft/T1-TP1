@@ -55,9 +55,72 @@ int main() {
     TUEmail testeF;
 
     switch(testeF.run()){
-        case TUDuracao::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+        case TUEmail::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
             break;
-        case TUDuracao::FALHA  : cout << "FALHA   - CODIGO" << endl;
+        case TUEmail::FALHA  : cout << "FALHA   - CODIGO" << endl;
+            break;
+    }
+
+    TUEndereco testeG;
+
+    switch(testeG.run()){
+        case TUEndereco::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+            break;
+        case TUEndereco::FALHA  : cout << "FALHA   - CODIGO" << endl;
+            break;
+    }
+
+    TUHorario testeH;
+
+    switch(testeH.run()){
+        case TUHorario::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+            break;
+        case TUHorario::FALHA  : cout << "FALHA   - CODIGO" << endl;
+            break;
+    }
+
+    TUIdioma testeI;
+
+    switch(testeI.run()){
+        case TUIdioma::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+            break;
+        case TUIdioma::FALHA  : cout << "FALHA   - CODIGO" << endl;
+            break;
+    }
+
+    TUTitulo testeJ;
+
+    switch(testeJ.run()){
+        case TUTitulo::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+            break;
+        case TUTitulo::FALHA  : cout << "FALHA   - CODIGO" << endl;
+            break;
+    }
+
+    TUSenha testeK;
+
+    switch(testeK.run()){
+        case TUSenha::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+            break;
+        case TUSenha::FALHA  : cout << "FALHA   - CODIGO" << endl;
+            break;
+    }
+
+    TUNota testeL;
+
+    switch(testeL.run()){
+        case TUNota::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+            break;
+        case TUNota::FALHA  : cout << "FALHA   - CODIGO" << endl;
+            break;
+    }
+
+    TUNome testeM;
+
+    switch(testeM.run()){
+        case TUNome::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+            break;
+        case TUNome::FALHA  : cout << "FALHA   - CODIGO" << endl;
             break;
     }
 

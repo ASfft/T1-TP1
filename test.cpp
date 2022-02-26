@@ -13,9 +13,7 @@
 using namespace std;
 
 int main(){
-    string valor = "12:33";
-    size_t separador = valor.find(':');
-    int horas = stoi(valor.substr(0, separador));
-    int minutos = stoi(valor.substr(separador + 1, string::npos));
-    cout << horas << minutos;
+    string value = "abc";
+    cout << (value[5] == '.');
+    int invalid_chars[11] = {34, 40, 41, 58, 59, 60, 62, 64, 91, 92, 93};
 };
