@@ -91,3 +91,32 @@ void Idioma::setValor(string valor) {
     this->valor = valor;
 }
 
+
+// Matricula: 200049682
+// Pedro Brazil Suffert
+
+//Nome:
+void Nome::validar(string valor) {
+    size_t len = valor.length();
+    if (len < 5 || len > 20)
+        throw invalid_argument("Argumento invalido.");
+    for (int i = 0; i < len; i++) {
+        char c = valor[i];
+        char next_c = valor[i + 1];
+        char prev_c = valor[i - 1];
+        if (c == '.' && !((prev_c >= 65 && prev_c <= 90) || (prev_c >= 97 && prev_c <= 122)))
+            throw invalid_argument("Argumento invalido.");
+        if (c == '.' && (next_c != ' ' or i == len - 1))
+            throw invalid_argument("Argumento invalido.");
+        int valor_ascii = (int) c;
+        if (!((valor_ascii >= 65 && valor_ascii <= 90) || (valor_ascii >= 97 && valor_ascii <= 122) ||
+              valor_ascii == 32 ||
+              valor_ascii == 46))
+            throw invalid_argument("Argumento invalido.");
+    }
+}
+
+void Nome::setValor(string valor) {
+    validar(valor);
+    this->valor = valor;
+}

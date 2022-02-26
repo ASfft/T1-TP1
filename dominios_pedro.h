@@ -45,5 +45,16 @@ inline string Endereco::getValor() const{
     return valor;
 }
 
+class Nome {
+private:
+    string valor;
+    static void validar(string);
+public:
+    void setValor(string);
+    string getValor() const;
+};
+
+inline string Nome::getValor() const{
+    return valor;
 
 #endif //T1_TP1_DOMINIOS_PEDRO_H
