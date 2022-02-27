@@ -6,6 +6,9 @@
 //---------------------------------------------------------------------
 // Matricula: 200015095
 // Augusto Suffert Monteiro
+
+///Padrão para representação de excursão.
+///
 class Excursao {
 private:
     Codigo codigo;
@@ -105,6 +108,9 @@ inline Endereco Excursao::getEndereco() const {
 //---------------------------------------------------------------------
 // Matricula: 200015095
 // Augusto Suffert Monteiro
+
+///Padrão para representação de usuario.
+///
 class Usuario {
 private:
     Nome nome;
@@ -151,6 +157,9 @@ inline Senha Usuario::getSenha() const {
 //---------------------------------------------------------------------
 // Matricula: 200015095
 // Augusto Suffert Monteiro
+
+///Padrão para representação de sessao.
+///
 class Sessao {
 private:
     Codigo codigo;
@@ -206,6 +215,10 @@ inline Idioma Sessao::getIdioma() const {
 //---------------------------------------------------------------------
 // Matricula: 200015095
 // Augusto Suffert Monteiro
+
+///Padrão para representação de avaliacao.
+///
+
 class Avaliacao {
 private:
     Codigo codigo;

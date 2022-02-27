@@ -7,6 +7,9 @@
 //---------------------------------------------------------------------
 // Matricula: 200015095
 // Augusto Suffert Monteiro
+
+///Teste de unidade do dominio Codigo.
+///
 class TUCodigo {
 private:
     const string VALOR_VALIDO = "0000019";
@@ -27,6 +30,9 @@ public:
 //---------------------------------------------------------------------
 // Matricula: 200015095
 // Augusto Suffert Monteiro
+
+///Teste de unidade do dominio Cidade.
+///
 class TUCidade {
 private:
     const string VALOR_VALIDO = "Hong Kong";
@@ -47,6 +53,9 @@ public:
 //---------------------------------------------------------------------
 // Matricula: 200015095
 // Augusto Suffert Monteiro
+
+///Teste de unidade do dominio Data.
+///
 class TUData {
 private:
     const string VALOR_VALIDO = "26-Nov-2001";
@@ -67,6 +76,9 @@ public:
 //---------------------------------------------------------------------
 // Matricula: 200015095
 // Augusto Suffert Monteiro
+
+///Teste de unidade do dominio Descricao.
+///
 class TUDescricao {
 private:
     const string VALOR_VALIDO = "Descricao valida.";
@@ -87,6 +99,9 @@ public:
 //---------------------------------------------------------------------
 // Matricula: 200015095
 // Augusto Suffert Monteiro
+
+///Teste de unidade do dominio Duracao.
+///
 class TUDuracao {
 private:
     const static int VALOR_VALIDO = 30;
@@ -107,6 +122,9 @@ public:
 //---------------------------------------------------------------------
 // Matricula: 200015095
 // Augusto Suffert Monteiro
+
+///Teste de unidade do dominio Email.
+///
 class TUEmail {
 private:
     const string VALOR_VALIDO = "joazinho.1-2/3@gmail.com";
@@ -127,6 +145,9 @@ public:
 //---------------------------------------------------------------------
 // Matricula: 200049682
 // Pedro Brazil Suffert
+
+///Teste de unidade do dominio Endereco.
+///
 class TUEndereco {
 private:
     const string VALOR_VALIDO = "Rua das Palmeiras 1";
@@ -147,6 +168,9 @@ public:
 //---------------------------------------------------------------------
 // Matricula: 200049682
 // Pedro Brazil Suffert
+
+///Teste de unidade do dominio Horario.
+///
 class TUHorario {
 private:
     const string VALOR_VALIDO = "12:30";
@@ -167,6 +191,9 @@ public:
 //---------------------------------------------------------------------
 // Matricula: 200049682
 // Pedro Brazil Suffert
+
+///Teste de unidade do dominio Idioma.
+///
 class TUIdioma {
 private:
     const string VALOR_VALIDO = "Ingles";
@@ -187,6 +214,9 @@ public:
 //---------------------------------------------------------------------
 // Matricula: 200049682
 // Pedro Brazil Suffert
+
+///Teste de unidade do dominio Nome.
+///
 class TUNome {
 private:
     const string VALOR_VALIDO = "Filipe. ";
@@ -207,6 +237,9 @@ public:
 //---------------------------------------------------------------------
 // Matricula: 190134330
 // Eduardo Augusto Volpi
+
+///Teste de unidade do dominio Titulo.
+///
 class TUTitulo {
 private:
     const string VALOR_VALIDO = "Zaicrtsha";
@@ -227,6 +260,9 @@ public:
 //---------------------------------------------------------------------
 // Matricula: 190134330
 // Eduardo Augusto Volpi
+
+///Teste de unidade do dominio Senha.
+///
 class TUSenha {
 private:
     const string VALOR_VALIDO = "Ame189";
@@ -247,6 +283,9 @@ public:
 //---------------------------------------------------------------------
 // Matricula: 190134330
 // Eduardo Augusto Volpi
+
+///Teste de unidade do dominio Nota.
+///
 class TUNota {
 private:
     const static int VALOR_VALIDO = 3;
@@ -267,6 +306,9 @@ public:
 //---------------------------------------------------------------------
 // Matricula: 200015095
 // Augusto Suffert Monteiro
+
+///Teste de unidade do dominio Excursao.
+///
 class TUExcursao {
 private:
     const string CODIGO_VALIDO   = "0001325";
@@ -290,6 +332,9 @@ public:
 //---------------------------------------------------------------------
 // Matricula: 200015095
 // Augusto Suffert Monteiro
+
+///Teste de unidade do dominio Usuario.
+///
 class TUUsuario {
 private:
     const string NOME_VALIDO   = "Joazinho135";
@@ -309,6 +354,9 @@ public:
 //---------------------------------------------------------------------
 // Matricula: 200015095
 // Augusto Suffert Monteiro
+
+///Teste de unidade do dominio Sessao.
+///
 class TUSessao {
 private:
     const string CODIGO_VALIDO   = "4310004";
@@ -329,6 +377,9 @@ public:
 //---------------------------------------------------------------------
 // Matricula: 200015095
 // Augusto Suffert Monteiro
+
+///Teste de unidade do dominio Avaliacao.
+///
 class TUAvaliacao {
 private:
     const string CODIGO_VALIDO   = "6010318";
